@@ -6,7 +6,7 @@
 
 #define GRID 21
 #define MINSIZE 4
-#define BUFFSIZE (GRID + 2)
+#define BUFFSIZE (GRID + 1)
 
 
 struct maze{
@@ -246,8 +246,7 @@ bool readsize(maze* c, char buffer[])
 {
    char h[BUFFSIZE], w[BUFFSIZE];
 
-   sscanf(buffer, "%s", h);
-   sscanf(buffer, "%s", w);
+   sscanf(buffer, "%s %s", h, w);   
    c->height = atoi(h);
    c->width = atoi(w);
    
